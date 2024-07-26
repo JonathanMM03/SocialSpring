@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: 'mysql:latest'
+    environment:
+      - 'MYSQL_DATABASE=metaphorce'
+      - 'MYSQL_ROOT_PASSWORD=password'
+    ports:
+      - '3307:3306'
+
+  mongodb:
+    image: 'mongo:latest'
+    ports:
+      - '27018:27017'
